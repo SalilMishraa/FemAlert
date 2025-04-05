@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | FemAlert</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+
+  <!-- Logo -->
+  <div class="mb-8">
+    <img src="../assets/FemAlert.jpeg" alt="FemAlert Logo" class="w-[412px] h-[258px] object-contain" />
+  </div>
+
+  <!-- Sign Up Form -->
+  <div class="bg-white shadow-md rounded-xl p-8 w-full max-w-md">
+    <h2 class="text-2xl font-bold text-center mb-6 text-red-600">Create an Account</h2>
+    <form id="signupForm" class="space-y-4">
+      <input type="text" name="name" placeholder="Full Name" required class="w-full p-2 border rounded" />
+      <input type="tel" name="contact" placeholder="Contact Number" required class="w-full p-2 border rounded" />
+      <input type="email" name="email" placeholder="Email" required class="w-full p-2 border rounded" />
+      <input type="password" name="password" placeholder="Password" required class="w-full p-2 border rounded" />
+      <input type="password" name="confirmPassword" placeholder="Confirm Password" required class="w-full p-2 border rounded" />
+      <button type="submit" class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700">Sign Up</button>
+    </form>
+    <div class="text-center mt-4 text-sm">
+      Already have an account? <a href="login.html" class="text-blue-600 hover:underline">Login</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const password = e.target.password.value;
+      const confirmPassword = e.target.confirmPassword.value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      // Here you would send the form data to your backend (e.g. MongoDB)
+      alert("Account created successfully!");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

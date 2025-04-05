@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Overseers | FemAlert</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- NAVIGATION -->
+  <nav class="bg-red-600 text-white flex justify-center space-x-6 p-4 text-lg font-semibold">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="about.html" class="hover:underline">About</a>
+    <a href="features.html" class="hover:underline">Features</a>
+    <a href="contact.html" class="hover:underline">Contact</a>
+  </nav>
+
+  <!-- REGISTER AS OVERSEER -->
+  <section class="p-6">
+    <h2 class="text-xl font-bold mb-4 text-center">Become an Overseer</h2>
+
+    <div class="overseer-form-container">
+      <form id="overseerForm" class="space-y-4">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" placeholder="Full Name" required />
+
+        <label for="contact">Contact Number</label>
+        <input type="tel" name="contact" id="contact" placeholder="Contact Number" required />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email" required />
+
+        <label for="address">Permanent Address</label>
+        <input type="text" name="address" id="address" placeholder="Permanent Address" required />
+
+        <label for="familyCount">Family Member Count</label>
+        <input type="number" name="familyCount" id="familyCount" placeholder="Family Member Count" required />
+
+        <label for="aadhar">Aadhaar Photo</label>
+        <input type="file" name="aadhar" id="aadhar" accept="image/*" required />
+
+        <button type="submit" class="overseer-submit-btn">Register as Overseer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FIND OVERSEERS -->
+  <section class="p-6">
+    <hr class="my-12">
+    <h2 class="text-xl font-bold text-center mb-4">Find Overseer</h2>
+    <div class="text-center">
+      <button onclick="findOverseers()" class="find-overseer-btn">Find Closest Overseers</button>
+    </div>
+    <div id="overseerResults" class="overseer-list mt-6">
+      <!-- Dynamic results will appear here -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center p-4 bg-red-600 text-white mt-10">
+    &copy; 2025 FemAlert. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

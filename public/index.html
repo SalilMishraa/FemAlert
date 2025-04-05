@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FemAlert - Home</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- LOGO -->
+  <div class="text-center py-6">
+    <img src="../assets/FemAlert.jpeg" alt="FemAlert Logo" class="mx-auto w-[412px] h-[258px] object-contain" />
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="bg-red-600 text-white flex flex-wrap justify-center gap-4 p-4 text-lg font-semibold">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="about.html" class="hover:underline">About</a>
+    <a href="features.html" class="hover:underline">Features</a>
+    <a href="contact.html" class="hover:underline">Contact</a>
+    <a href="overseers.html" class="hover:underline">Overseers</a>
+    <a href="login.html" class="hover:underline">Login</a>
+    <a href="signup.html" class="hover:underline">Signup</a>
+  </nav>
+
+  <!-- SOS BUTTON -->
+  <section class="text-center my-6">
+    <button onclick="triggerSOS()" class="bg-red-600 text-white px-6 py-3 rounded-xl font-bold text-xl">
+      🚨 SOS - Call 100
+    </button>
+  </section>
+
+  <!-- MISSION -->
+  <section class="p-8 bg-gray-100 text-center">
+    <h2 class="text-2xl font-semibold mb-4">Mission Statement</h2>
+    <p class="text-lg max-w-2xl mx-auto">
+      FemAlert is a community-driven safety platform built for and by society to empower women through real-time help, safe commuting, and verified local support. Together, we ensure no one walks alone.
+    </p>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="p-8">
+    <h2 class="text-xl font-bold mb-4 text-center">Key Features</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div class="feature-card">🔴 <strong>SOS Button:</strong> Instantly alert contacts and authorities.</div>
+      <div class="feature-card">🛣️ <strong>Route Safety Checker:</strong> Choose safer routes using crime data.</div>
+      <div class="feature-card">📞 <strong>Fake Call Generator:</strong> Simulated calls with live location sharing.</div>
+      <div class="feature-card">🧍‍♀️ <strong>Overseer Network:</strong> Reach verified local volunteers nearby.</div>
+      <div class="feature-card">🌙 <strong>Night Commute Buddy:</strong> Commute with verified users (Premium).</div>
+      <div class="feature-card">📍 <strong>Periodic Check-ins:</strong> Automated safety check-ins (Premium).</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center p-4 bg-red-600 text-white mt-10">
+    &copy; 2025 FemAlert. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
